@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_package = "com.syscho.grpc.stub";
+option java_multiple_files = true;
+
+//v1
+message Laptop{
+  string  modelNumber = 1;
+  string brand = 2;
+  string manufacture = 3;
+  int32 year = 4;
+}
+
