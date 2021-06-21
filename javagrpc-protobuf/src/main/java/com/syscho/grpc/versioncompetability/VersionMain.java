@@ -21,7 +21,7 @@ public class VersionMain {
                 .setBrand(BRAND)
               //  .setManufacture(MANUFACTURE)
                 .setModelNumber(MODEL_NUMBER)
-                .setYear(YEAR)
+                //.setYear(YEAR)
                 .build();
 
         //Serialization using v1

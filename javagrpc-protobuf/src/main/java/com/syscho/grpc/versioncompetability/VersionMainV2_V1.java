@@ -20,7 +20,7 @@ public class VersionMainV2_V1 {
         Laptop laptop = Laptop.newBuilder()
                 .setBrand(BRAND)
                 .setModelNumber(MODEL_NUMBER)
-                .setYear(YEAR)
+             //   .setYear(YEAR)
                 .build();
 
         //Serialization using v1  - V1 Serialized Object

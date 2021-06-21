@@ -16,8 +16,18 @@ message Laptop{
 
 
 //V2  - removed a property value from v1 (manufacture) missing
+/*
 message Laptop{
   string  modelNumber =1;
   string brand =2;
   int32 year=4;
+}*/
+
+
+//v3  -- error
+//Changed the year pointer to 3 earlier it   manufacture = 3;  - create problem
+message Laptop{
+  string  modelNumber =1;
+  string brand =2;
+  int32 year=3;
 }
