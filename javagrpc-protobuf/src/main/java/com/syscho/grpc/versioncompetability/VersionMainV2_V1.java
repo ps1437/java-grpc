@@ -7,7 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class VersionMain {
+public class VersionMainV2_V1 {
 
     public static final String BRAND = "HP";
     public static final String MANUFACTURE = "HP";
@@ -16,20 +16,22 @@ public class VersionMain {
 
     public static void main(String[] args) throws IOException {
 
-
+       //V2 Object
         Laptop laptop = Laptop.newBuilder()
                 .setBrand(BRAND)
-              //  .setManufacture(MANUFACTURE)
                 .setModelNumber(MODEL_NUMBER)
                 .setYear(YEAR)
                 .build();
 
-        //Serialization using v1
-        Path pathV1 = Paths.get("src/main/file/laptop.v1");
-        Path path = Files.write(pathV1, laptop.toByteArray());
+        //Serialization using v1  - V1 Serialized Object
+      //  Path pathV1 = Paths.get("src/main/file/laptop.v2");
+     //   Path path = Files.write(pathV1, laptop.toByteArray());
 
-        Laptop parseLaptopV1 = Laptop.parseFrom(Files.readAllBytes(pathV1));
-        System.out.println(parseLaptopV1);
+        Path pathV1 = Paths.get("src/main/file/laptop.v1");
+        Laptop parseLaptopV2 = Laptop.parseFrom(Files.readAllBytes(pathV1));
+        //Serialization using v1 to DeSerialization to v2
+        System.out.println(parseLaptopV2);
+
 
     }
 }
